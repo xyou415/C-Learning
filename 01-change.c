@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
     system("chcp 65001 > nul");
     int price=0,count=0;
     const int AMOUNT=200;
@@ -11,7 +12,14 @@ int main() {
     scanf("%d",&count);
     int total=price*count;
     int rest=AMOUNT-total;
-    printf("总价为；%d\n",total);
-    printf("剩余金额为%d",rest);
+    if (rest<0)
+    {
+        printf("总价为%d元,余额不足,还差%d元\n",total,-rest);
+    }
+    else
+    {
+        printf("总价为%d元\n",total);
+        printf("剩余金额为%d元\n",rest);
+    }
     return 0;
 }
