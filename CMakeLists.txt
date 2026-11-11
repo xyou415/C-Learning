@@ -3,8 +3,5 @@ project(hello C)
 
 set(CMAKE_C_STANDARD 17)
 
-if(WIN32)
-    add_compile_options(-fexec-charset=GBK)
-endif()
-
 add_executable(untitled main.c)
+add_executable(grade04 04-grade.c)
